@@ -59,11 +59,50 @@
     async function predict() {
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
-        for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
+        if (prediction[0].probability.toFixed(2) > 0.80){
+            window.location.href = "./arsenal.html";
+        }else if(prediction[1].probability.toFixed(2) > 0.80){
+            window.location.href = "./aston-villa.html";
+        }else if(prediction[2].probability.toFixed(2) > 0.80){
+            window.location.href = "./brentford.html";
+        }else if(prediction[3].probability.toFixed(2) > 0.80){
+            window.location.href = "./brighton.html";
+        }else if(prediction[4].probability.toFixed(2) > 0.80){
+            window.location.href = "./burnley.html";
+        }else if(prediction[5].probability.toFixed(2) > 0.80){
+            window.location.href = "./chelsea.html";
+        }else if(prediction[6].probability.toFixed(2) > 0.80){
+            window.location.href = "./crystal-replace.html";
+        }else if(prediction[7].probability.toFixed(2) > 0.80){
+            window.location.href = "./everton.html";
+        }else if(prediction[8].probability.toFixed(2) > 0.80){
+            window.location.href = "./leeds.html";
+        }else if(prediction[9].probability.toFixed(2) > 0.80){
+            window.location.href = "./leicester-city";
+        }else if(prediction[10].probability.toFixed(2) > 0.80){
+            window.location.href = "./livepool.html";
+        }else if(prediction[11].probability.toFixed(2) > 0.80){
+            window.location.href = "./manchester-city.html";
+        }else if(prediction[12].probability.toFixed(2) > 0.80){
+            window.location.href = "./manchester-united.html";
+        }else if(prediction[13].probability.toFixed(2) > 0.80){
+            window.location.href = "./newcastle.html";
+        }else if(prediction[14].probability.toFixed(2) > 0.80){
+            window.location.href = "./norwich.html";
+        }else if(prediction[15].probability.toFixed(2) > 0.80){
+            window.location.href = "./southampton.html";
+        }else if(prediction[16].probability.toFixed(2) > 0.80){
+            window.location.href = "./tottenham.html";
+        }else if(prediction[17].probability.toFixed(2) > 0.80){
+            window.location.href = "./watford.html";
+        }else if(prediction[18].probability.toFixed(2) > 0.80){
+            window.location.href = "./west-ham.html";
+        }else if(prediction[19].probability.toFixed(2) > 0.80){
+            window.location.href = "./wolves.html";
         }
+
+
+        
     }
 </script>
 
